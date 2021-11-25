@@ -47,12 +47,13 @@ if module == "connect":
     try:
         extension = path.split(".")[-1]
         drivers = [x for x in pyodbc.drivers() if x.startswith('Microsoft Access Driver')]
-        print("drivers", drivers)
         drivers = "{" + drivers[0] + "}"
+        drivers = drivers.replace("(*.mdb)", "(*.mdb, *.accdb)")
         conn_str = (
             f'Driver={drivers};'
             f'DBQ={path};'
         )
+
 
         conn = pyodbc.connect(conn_str)
 
