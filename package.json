@@ -2,7 +2,7 @@
   "author": "Danilo Toro - <danilo.toro@rocketbot.cl>",
   "description": "Automate Microsoft Access",
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "homepage": "http://rocketbot.co",
   "linux": false,
@@ -40,6 +40,10 @@
             "title": {
               "es": "Seleccione base de datos",
               "en": "Select DB:"
+            },
+            "description" : {
+                "es" : "Conecta a la base de datos creada anteriormente. Formatos .mdb y .accdb son aceptados.",
+                "en" : "Connects to a data base already created. It can handle .mdb and .accdb formats."
             },
             "id": "path",
             "css": "col-md-12"
@@ -81,6 +85,10 @@
               "es": "Query",
               "en": "Query:"
             },
+            "description":{
+                "es" : "Query que se desea ejecutar en la base de datos.",
+                "en" : "Query to execute in the connected database."
+            },
             "id": "query",
             "css": "col-md-12"
           },
@@ -97,6 +105,10 @@
             "help": {
               "es": "Nombre de variable sin llaves {}",
               "en": "Variable name without {}"
+            },
+            "description":{
+                "es" : "Variable donde guardar el resultado.",
+                "en" : "Variable to save in the result."
             },
             "id": "var_",
             "css": "col-md-12"
