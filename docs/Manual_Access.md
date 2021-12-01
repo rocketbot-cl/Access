@@ -16,8 +16,10 @@ __Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de ro
 
 ## Como usar este módulo
 
-Para usar este módulo, tienes que seleccionar una base de datos (.mdb o .accdb) y 
-connectarte a ella; luego puedes ejecutar query para obtener los datos de la misma.
+Para usar este módulo, tienes que seleccionar una base de datos (.mdb o .accdb) y connectarte a ella; luego puedes ejecutar query para obtener los datos de la misma.
+Para leer base de datos .accdb, deberá tener instalado los respectivos drivers (se deben instalar los drivers de 32 bits).
+Se pueden bajar desde el siguiente link:
+https://www.microsoft.com/es-es/download/details.aspx?id=13255
 
 
 
