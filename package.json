@@ -2,7 +2,7 @@
   "author": "Danilo Toro - <danilo.toro@rocketbot.cl>",
   "description": "Automate Microsoft Access",
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "license": "MIT",
   "homepage": "http://rocketbot.co",
   "linux": false,
@@ -127,6 +127,34 @@
       "windows": true,
       "mac": true,
       "docker": true
-    }
+    },
+    {
+        "en": {
+          "title": "Close connection",
+          "description": "Closes a connection to Access db."
+        },
+        "es": {
+          "title": "Cerrar conexion",
+          "description": "Cierra la conexión establecido a la base de datos de Access."
+        },
+        "form": {
+          "css": "modal-lg",
+          "inputs": [
+            
+          ]
+        },
+        "video_youtube": "",
+        "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Y2lyY2xlIHN0eWxlPSJmaWxsOiNGOTdEQTA7IiBjeD0iMjU2IiBjeT0iMjU2IiByPSIyNTYiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0RCNUU4NTsiIGQ9Ik0zMTAuMzU5LDE0My41OTFsLTMxLjU0NC0zMS41NDRMOTkuMjcsMTQzLjU0OHYyMjQuOTA0bDE0My4xOTIsMTQzLjE5MiAgQzI0Ni45NDYsNTExLjg3OCwyNTEuNDU4LDUxMiwyNTYsNTEyYzEzNy4wNiwwLDI0OC45NTktMTA3LjcxLDI1NS42NzctMjQzLjEwMkw0MDcuMDg0LDE2NC4zMDQgIGMtMTMuMzcxLTEzLjg5LTQ4LjQ4MS0yMS4wODgtODMuMjYtMjEuMDg4QzMxOS4zMjQsMTQzLjIxNiwzMTQuODIzLDE0My4zNTEsMzEwLjM1OSwxNDMuNTkxeiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTMyMy44MjQsMTQzLjIxNmMtNDQuMTgxLDAtODguOTA1LDExLjYxMy04OC45MDUsMzMuODA4czQ0LjcyNSwzMy44MDgsODguOTA1LDMzLjgwOCAgYzMwLjg5NSwwLDYyLjA1Mi01LjY4LDc4LTE2LjY4NnYzNS41MjhjMCw5LjMzOC0zMC4zODUsMjIuOTAyLTc4LDIyLjkwMnMtNzgtMTMuNTY0LTc4LTIyLjkwMmgtMTAuOTA2ICBjMCwyMi4xOTYsNDQuNzI1LDMzLjgwOCw4OC45MDUsMzMuODA4YzMwLjg5NSwwLDYyLjA1Mi01LjY4LDc4LTE2LjY4NnYzNS41MjhjMCw5LjMzOC0zMC4zODUsMjIuOTAyLTc4LDIyLjkwMiAgcy03OC0xMy41NjQtNzgtMjIuOTAyaC0xMC45MDZjMCwyMi4xOTUsNDQuNzI1LDMzLjgwOCw4OC45MDUsMzMuODA4YzMwLjg5NSwwLDYyLjA1Mi01LjY4LDc4LTE2LjY4NnYzNS41MjggIGMwLDkuMzM4LTMwLjM4NSwyMi45MDMtNzgsMjIuOTAzcy03OC0xMy41NjQtNzgtMjIuOTAzaC0xMC45MDZjMCwyMi4xOTYsNDQuNzI1LDMzLjgwOCw4OC45MDUsMzMuODA4ICBjNDQuMTgxLDAsODguOTA2LTExLjYxMyw4OC45MDYtMzMuODA4VjE3Ny4wMjVDNDEyLjczLDE1NC44MjksMzY4LjAwNSwxNDMuMjE2LDMyMy44MjQsMTQzLjIxNnogTTMyMy44MjQsMTk5LjkyNyAgYy00Ny42MTQsMC03OC0xMy41NjQtNzgtMjIuOTAyczMwLjM4NS0yMi45MDMsNzgtMjIuOTAzczc4LDEzLjU2NCw3OCwyMi45MDNTMzcxLjQzOSwxOTkuOTI3LDMyMy44MjQsMTk5LjkyN3oiLz4KPHBvbHlnb24gc3R5bGU9ImZpbGw6I0FGMjI0MzsiIHBvaW50cz0iMjc4LjgxNSwzOTkuOTUzIDk5LjI3LDM2OC40NTIgOTkuMjcsMTQzLjU0OCAyNzguODE1LDExMi4wNDcgIi8+CjxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMTc2LjgxOCwxOTcuNTQzaDE3Ljk2NGwzOS43NTYsMTA0LjU0NEgyMTMuNjNsLTkuNzE4LTI2LjA2MmgtMzYuNTE3bC05LjU3MSwyNi4wNjJoLTIwLjkwOSAgTDE3Ni44MTgsMTk3LjU0M3ogTTIwMC4yMywyNjEuNzQyTDE4NS44LDIyMC42NmwtMTUuMDE5LDQxLjA4MWgyOS40NDlWMjYxLjc0MnoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+        "module": "closeConnection",
+        "module_name": "Access",
+        "visible": true,
+        "options": false,
+        "father": "module",
+        "group": "scripts",
+        "linux": false,
+        "windows": true,
+        "mac": true,
+        "docker": true
+      }
   ]
 }

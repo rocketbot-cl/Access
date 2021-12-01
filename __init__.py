@@ -91,3 +91,13 @@ if module == "execute_query":
         PrintException()
         raise e
 
+if (module == "closeConnection"):
+    try:
+        Access["conn"].close()
+
+    except Exception as e:
+        print("\x1B[" + "31;40mError\u2193\x1B[" + "0m")
+        PrintException()
+        raise e
+
+
