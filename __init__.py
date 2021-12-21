@@ -79,32 +79,14 @@ if module == "execute_query":
 
         cursor = Access["conn"].cursor()
         cursor.execute(query)
-        if query.lower().startswith(('{call', '{ call')) and params:
-            # params = tuple(params.split(","))
-            query_params = query2params(*params)
-            q = (query, ) + query2params(*params)
-            cursor.execute(*q)
-        else:
-            cursor.execute(query)
-            
-        data = []
-        if query.lower().startswith(('select','execute', '{call')) and cursor.description:
-            
-                columns = [column[0] for column in cursor.description]
-
-                for row in cursor:
-                    ob_ = {}
-                    t = 0
-                    for r in row:
-                        ob_[columns[t]] = str(r) + ""
-                        t = t + 1
-
-                    data.append(ob_)
-        else:
-            connection.commit()
-            data = cursor.rowcount, 'registros afectados'
+        try:
+            fetch = cursor.fetchall()
+        except:
+            Access["conn"].commit()
+            fetch = "Se afectaron registros"
+        print(result, fetch)
         if result:
-            SetVar(result, data)
+            SetVar(result, fetch)
 
     except Exception as e:
         print("\x1B[" + "31;40mError\u2193\x1B[" + "0m")
