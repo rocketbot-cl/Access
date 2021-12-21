@@ -17,8 +17,7 @@ and connects to it; then you can execute query to obtain its data.
 For .accdb databases, you need the drivers (you 
 should install the 32 bits drivers).
 You can get it from Microsoft in the following link:
-https://www.microsoft.com/en-
-us/download/details.aspx?id=13255
+https://www.microsoft.com/en-us/download/details.aspx?id=13255
 
 
 ## Overview
