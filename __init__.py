@@ -28,7 +28,14 @@ import sys
 
 base_path = tmp_global_obj["basepath"]
 cur_path = base_path + 'modules' + os.sep + 'Access' + os.sep + 'libs' + os.sep
-sys.path.append(cur_path)
+cur_path_x64 = os.path.join(cur_path, 'Windows' + os.sep +  'x64' + os.sep)
+cur_path_x86 = os.path.join(cur_path, 'Windows' + os.sep +  'x86' + os.sep)
+
+if sys.maxsize > 2**32 and cur_path_x64 not in sys.path:
+    sys.path.append(cur_path_x64)
+elif sys.maxsize <= 2**32 and cur_path_x86 not in sys.path:
+    sys.path.append(cur_path_x86)
+
 import pyodbc
 
 """
@@ -79,9 +86,11 @@ if module == "execute_query":
 
         cursor = Access["conn"].cursor()
         cursor.execute(query)
-
-
-        fetch = cursor.fetchall()
+        try:
+            fetch = cursor.fetchall()
+        except:
+            Access["conn"].commit()
+            fetch = "Se afectaron registros"
         print(result, fetch)
         if result:
             SetVar(result, fetch)
